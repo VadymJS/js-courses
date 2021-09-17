@@ -82,7 +82,7 @@ console.log('/////////////////');
 const newThreeKeysArray = users.map((user) => (Object.keys(user).length > 3 ? {...user} : {}));
 console.log(newThreeKeysArray);
 
-console.log('/////////////////');
+console.log('/////////////////'); 
 
 const newStringNumberArray = users.filter((user) => {
     const newKeysArray = Object.values(user).filter((key) => {
