@@ -74,13 +74,14 @@ console.log(adresses);
 console.log('/////////////////');
 console.log('Second part:');
 
+
 const newNameArray = users.map((user) => ({name: user.name ? user.name : 'John', lastName: user.lastName ? user.lastName : 'Wick'}));
 console.log(newNameArray);
 
 console.log('/////////////////');
 
 const newThreeKeysArray = users.map((user) => (Object.keys(user).length > 3 ? {...user} : {}));
-console.log(newThreeKeysArray);
+console.log(newThreeKeysArray); 
 
 console.log('/////////////////'); 
 
