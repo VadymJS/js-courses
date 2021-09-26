@@ -63,6 +63,8 @@ function calc () {
         }
     }
 
+    // вынести reduce в начало
+
     function calcResult () {
         if (operation.includes('+')) {
             result = ints.reduce(function (sum, value){
