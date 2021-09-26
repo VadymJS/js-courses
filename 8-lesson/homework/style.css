@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#btn, #input {
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 8px;
+    min-width: 80px;
+}
+
+#btn {
+    margin-left: 10px;
+    background-color: lightblue;
+    border-color: black;
+    cursor: pointer;
+}
+
+#list {
+    background-color: coral;
+    border-radius: 12px;
+    width: 100%;
+    min-height: 200px;
+    padding: 20px;
+}
