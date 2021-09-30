@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#btn, .input {
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 8px;
+    min-width: 80px;
+}
+
+#btn {
+    margin-left: 10px;
+    background-color: lightblue;
+    border-color: black;
+    cursor: pointer;
+}
+
+.table-container {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+#table {
+    background-color: coral;
+    width: 100%;
+    padding: 20px;
+}
+
+#table th {
+    text-align: left;
+}
