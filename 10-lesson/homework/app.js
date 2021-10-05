@@ -5,12 +5,13 @@ const inputTask = document.querySelector('#input');
 const list = document.querySelector('#list');
 
 btn.addEventListener('click', addTask);
+list.addEventListener('click', clickContainer);
 
 function createTask () {
     if (inputTask.value.trim()) {
         const taskEl = document.createElement('li');
         taskEl.textContent = inputTask.value;
-        taskEl.addEventListener('click', () => tickTask(taskEl));
+        taskEl.id = 'task';
         addDeleteButton(taskEl);
         list.append(taskEl);
     } else {
@@ -21,7 +22,7 @@ function createTask () {
 function addDeleteButton (el) {
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'x';
-    deleteBtn.addEventListener('click', () => deleteTask(deleteBtn));
+    deleteBtn.id = 'btn-delete'
     el.append(deleteBtn);
 }
 
@@ -30,16 +31,16 @@ function addTask () {
     clearInput(inputTask);
 }
 
-function deleteTask (el) {
-    el.parentNode.remove();
-}
-
 function clearInput (input) {
     input.value = '';
 }
 
-function tickTask (el) {
-    el.classList.toggle('complete');
+function clickContainer (e) {
+    if(e.target.id === 'btn-delete') {
+        e.target.parentNode.remove();
+    } else if (e.target.id === 'task') {
+        e.target.classList.toggle('complete');
+    }
 }
 
 
