@@ -13,6 +13,11 @@ let displayNumber = null, memoryNumber = null, operation = null, sum = null, mem
 
 
 function Calculator() {
+    this.displayNumber = displayNumber;
+    this.memoryNumber = memoryNumber;
+    this.operation = operation;
+    this.sum = sum;
+    this.memorySum = memorySum;
     calcEl.addEventListener('click', calcClick);
     function renderNumbers() {
         numbers.forEach((number) => {
