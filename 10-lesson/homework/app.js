@@ -36,9 +36,11 @@ function clearInput (input) {
 }
 
 function clickContainer (e) {
+    console.log(e.target.id)
     if(e.target.id === 'btn-delete') {
         e.target.parentNode.remove();
     } else if (e.target.id === 'task') {
+        e.stopPropagation();
         e.target.classList.toggle('complete');
     }
 }
