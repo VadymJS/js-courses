@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.tabs-container {
+    
+}
+
+.tabs-title {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tabs-title-item {
+    padding: 10px 30px;
+    border-bottom: 1px solid darkgrey;
+    border-radius: 4px 4px 0 0;
+}
+
+.tabs-title-item:hover {
+    background-color: rgba(180, 168, 168, 0.1);
+    border-bottom-color: gray;
+}
+
+.tabs-title-item.is-active {
+    background-color: rgba(24, 109, 236, 0.2);
+    border-bottom-color: black;
+}
+
+.tabs-body-item {
+    display: none;
+}
+
+.tabs-body-item.is-active {
+    display: block;
+}
