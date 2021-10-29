@@ -11,14 +11,16 @@ function userCheck(login) {
             .then(function (response) {
             containerEl.innerHTML = 
                 '<img src="' + response.data.avatar_url + '">' + 
-                '<p>Public repos:' + ' ' + response.data.public_repos + 
-                '<p>' +'<p>Followers:' + ' ' + response.data.followers + 
-                '<p>' + '<p>Following:' + ' ' + response.data.following + '<p>'
+                '<p>Public repos:' + ' ' + response.data.public_repos + '</p>' +
+                '<p>Followers:' + ' ' + response.data.followers + '</p>' +
+                '<p>Following:' + ' ' + response.data.following + '</p>'
             ;
         })
             .catch(function (error) {
-            containerEl.innerHTML = '<p>Error, try again';
+            containerEl.innerHTML = '<p>' + error + '</p>';
         });
+    } else {
+        containerEl.innerHTML = '<p>Error: type something</p>';
     }
     
 }
