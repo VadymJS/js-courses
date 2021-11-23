@@ -4,19 +4,34 @@ const userCont$ = $('.users-container');
 const postCont$ = $('.posts-container')
                     .html('Nothing to post');
 
-function renderUsers() {
+function getUsers() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
-        .then((json) => json.forEach(user => {
-            const btn$ = $('<button/>')
-                            .addClass('btn-show-posts')
-                            .attr('id', user.id)
-                            .html('Show posts');
-            const user$ = $('<div/>')
-                            .html(user.username)
-                            .append(btn$)
-            userCont$.append(user$);
-        }));
+        .then((json) => new Promise((res, rej) => {
+            setTimeout(() => {
+                res(json)
+            }, 300)
+        })
+        .then((r) => {
+            r.forEach((user) => {
+                renderUsers(user);
+            })
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+    )
+}
+
+function renderUsers(user) {
+    const btn$ = $('<button/>')
+                    .addClass('btn-show-posts')
+                    .attr('id', user.id)
+                    .html('Show posts');
+    const user$ = $('<div/>')
+                    .html(user.username)
+                    .append(btn$)
+    userCont$.append(user$);
 }
 
 function addEvents() {
@@ -37,7 +52,7 @@ function showPosts(e) {
 }
 
 function init () {
-    renderUsers();
+    getUsers();
     addEvents();
 }
 

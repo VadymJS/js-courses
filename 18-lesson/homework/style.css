@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.users-container, .action-container {
+    width: 45%;
+    border-radius: 10px;
+    padding: 20px;
+    background: lightseagreen;
+    border: 3px solid lightblue;
+    height: 600px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.action-container {
+    display: none;
+}
+
+.action-container.is-active {
+    display: block;
+}
+
+.btn {
+    border-radius: 10px;
+    height: 40px;
+    background: lightskyblue;
+    border: 1px solid grey;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.btn-delete, .btn-cancel {
+    margin-left: 10px;
+}
+
+.btn-create {
+    flex: 1 0 auto;
+    max-height: 40px;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 40px;
+    background: lightskyblue;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.users-container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.users-container > div:first-child {
+    border-top: 3px solid lightblue;
+}
