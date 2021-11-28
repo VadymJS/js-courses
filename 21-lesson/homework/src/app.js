@@ -70,27 +70,3 @@ function init () {
 }
 
 init();
-
-
-
-// function sum() {
-//     return Array.prototype.reduce.call(arguments, (sum, value) => {
-//         return sum + value;
-//     }, 0)
-// }
-
-// console.log(sum(2,3,5));
-// console.log(sum(2,3));
-// console.log(sum(2,3,1,1,1,1,1,1));
-
-// function findUnique(arr) {
-//     let newArr = ['123'];
-//     return newArr = arr.filter((el) => {
-//         if(!newArr.includes(el)) {
-//             newArr.push(el);
-//         }
-//     })
-// }
-
-// console.log(findUnique(['a', 'b', 'c', 'c', 'b', 'a']));
-// console.log(findUnique([1, 2, 3, 4, 5, 5, 2]));

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.users-container, .posts-container {
+    width: 45%;
+    border-radius: 10px;
+    padding: 20px;
+    background: lightseagreen;
+    border: 3px solid lightblue;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.btn-show-posts {
+    border-radius: 10px;
+    height: 40px;
+    background: lightskyblue;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.users-container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.users-container > div:not(:last-child) {
+    margin-bottom: 10px;
+}
