@@ -1,0 +1,9 @@
+.login {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .form-control, .login .btn {
+    margin-top: 20px;
+}

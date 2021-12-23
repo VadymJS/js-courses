@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+}
+
+.header .btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.header .btn-logout {
+    margin-left: auto
+}

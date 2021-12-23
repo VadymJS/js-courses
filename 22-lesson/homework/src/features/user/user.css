@@ -1,0 +1,10 @@
+.user {
+    width: 200px;
+    height: 400px;
+    background-color: rgba(128, 0, 0, .8);
+    display: none;
+}
+
+.user.is-active {
+    display: block;
+}

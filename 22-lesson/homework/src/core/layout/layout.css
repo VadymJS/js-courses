@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+#main-container {
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+}
+
+.header {
+  padding: 20px;
+  width: 100%;
+  background-color: rgba(144, 146, 238, 0.7);
+}
