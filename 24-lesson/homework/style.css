@@ -1,5 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
 #canvas {
     border: 1px solid grey;
-    background-color: rgba(128, 128, 128, .2);
-    margin: 20px;
+    background-color: lightgrey;
+}
+
+.palette, .width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.width {
+    justify-content: flex-start;
+}
+
+.color, .size, #eraser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+#eraser {
+    margin-left: auto;
+    padding: 0 10px;
+    width: auto;
+}
+
+.size {
+    margin-right: 20px;
+}
+
+.color.is-active, .size.is-active, #eraser.is-active {
+    border: 3px solid goldenrod;
 }
